@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-bordered responsive-table" height="30">
+    <thead>
+      <tr>
+        <th scope="col" class="text-right">#</th>
+        <th scope="col">NAME</th>
+        <th scope="col" class="text-center">SYMBOL</th>
+        <th scope="col"></th>
+        <th scope="col" class="text-center">PRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates">
+        <td style="width: 10%;" class="text-right">{{ candidate.id }}</td>
+        <td style="width: 25%;"><b>{{ candidate.name }}</b><br>{{ candidate.party }}</td>
+        <td style="width: 30%;" class="align-middle text-center">
+          <img src="{{ candidate.symbol }}">
+        </td>
+        <td class="align-middle text-center">
+          <i class="fas fa-long-arrow-alt-left fa-5x float-right"></i>
+          <img *ngIf="voted_id == candidate.id" class="float-left"
+          src="../../../assets/vote_light.png" style="padding-top: 12.5%;">
+        </td>
+        <td style="width: 15%;" class="align-middle text-center">
+          <button class="btn custom-btn" (touchstart)="mouseDown(candidate.id)"
+          (mousedown)="mouseDown(candidate.id)" (click)="voteForCandidate(candidate)">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

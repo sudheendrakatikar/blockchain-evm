@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="text-center">Login to see results</h2>
+		<hr class="my-3">		
+    
+    <mat-form-field class="float-left" style="width: 30%;">
+        <input matInput [(ngModel)]="login_id" placeholder="Login ID" required>
+    </mat-form-field>
+
+    <mat-form-field class="float-right" style="width: 30%;">
+        <input matInput type="password" [(ngModel)]="password" placeholder="Password" required>
+    </mat-form-field>
+
+    <br><br><br><br>
+    <div class="text-center">
+      <button mat-raised-button color="primary" (click)="goToResults()">
+        Login
+      </button>
+    </div>
+</div>

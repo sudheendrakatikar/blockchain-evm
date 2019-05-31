@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table table-bordered responsive-table">
+    <thead>
+      <tr>
+        <th scope="col" class="text-right">#</th>
+        <th scope="col">NAME</th>
+        <th scope="col" class="text-center">SYMBOL</th>
+        <th scope="col">VOTES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of final">
+        <td style="width: 10%;" class="text-right">{{ f.id }}</td>
+        <td><b>{{ f.name }}</b><br>{{ f.party }}</td>
+        <td style="width: 30%;" class="align-middle text-center">
+          <img src="{{ f.symbol }}">
+        </td>
+        <td>{{ f.votes }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

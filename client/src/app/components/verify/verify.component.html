@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 class="text-center">Verify Your Vote</h1>
+		<hr class="my-3">		
+    
+    <mat-form-field class="float-left" style="width: 30%;">
+        <input matInput [(ngModel)]="transaction_id" placeholder="Transaction ID" required>
+    </mat-form-field>
+
+    <mat-form-field class="float-right" style="width: 55%;">
+      <mat-label>Choose</mat-label>
+      <mat-select [(value)]="candidate_id" required="true">
+        <mat-option *ngFor="let candidate of candidates" [value]="candidate.id">
+          {{ candidate.name }} -- {{ candidate.party }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br><br><br><br>
+    <div class="float-right">
+      <button mat-raised-button color="primary" (click)="verifyVote()" data-toggle="modal" data-target="#myModal">
+        Verify
+      </button>
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">{{ modal_heading }}</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            {{ modal_body }}
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+</div>

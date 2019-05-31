@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <a class="navbar-brand"><img src="../../../assets/eci_logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <p *ngIf="userLoggedIn()" class="nav-link">{{ currentUser }}</p>
+        </li>
+    </ul>	
+    </div>
+</nav>

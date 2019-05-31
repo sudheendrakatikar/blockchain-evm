@@ -1,0 +1,14 @@
+<div class="container">
+  <app-navbar></app-navbar>
+  <router-outlet>
+      <div class="container text-center" style="margin-top: 10%;">
+        <button *ngIf="!started" mat-raised-button color="primary" class="btn-lg" (click)="startElection()">
+          START ELECTION
+        </button>
+      </div>
+      <div class="container text-center">
+        <countdown-timer *ngIf="started" class="d-none" [end]="endTime" (zeroTrigger)="endElection()">
+        </countdown-timer>
+      </div>
+  </router-outlet>
+</div>
