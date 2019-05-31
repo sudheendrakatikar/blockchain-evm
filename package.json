@@ -1,0 +1,11 @@
+{
+  "name": "electronic-voting-machine",
+  "version": "1.0.0",
+  "description": "A blockchain powered EVM for secure voting",
+  "main": "main.js",
+  "scripts": {
+    "start": "./electron run start"
+  },
+  "author": "sudheendra",
+  "license": "ISC"
+}
